@@ -16,8 +16,9 @@ INSTALLATION
 2. run bundler
 
     bundle install
-  
-3. Enjoy!
+
+3. https://github.com/jdpace/PDFKit/wiki/Installing-WKHTMLTOPDF
+4. Enjoy!
 
 Configuration
 ==============
