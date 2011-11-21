@@ -1,5 +1,4 @@
 require 'print_invoice_hooks'
-require 'prawn_handler'
 require 'pdfkit'
 
 module PrintInvoice
@@ -8,10 +7,6 @@ module PrintInvoice
     def self.activate
 
       Admin::OrdersController.class_eval do
-        respond_to :html, :pdf
-        respond_override(:show => {:pdf => {:success =>
-            lambda { render :layout => false, :template => "admin/orders/#{params[:template] || "invoice"}.pdf.prawn" } } })
-            
         def print
           @hide_prices = params[:template] == "packaging_slip"
           render :template => "admin/orders/#{params[:template] || "invoice"}.html.erb", :layout => 'pdfkit'
