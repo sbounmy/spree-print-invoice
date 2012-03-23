@@ -14,6 +14,5 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
 
   s.add_dependency('pdfkit', '~> 0.5.2')
-  s.add_dependency('spree_core', '>= 0.30.0')
-
+  s.add_dependency('spree_core', '~> 1.0.0')
 end

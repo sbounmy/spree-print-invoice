@@ -3,7 +3,7 @@ SUMMARY
 
 This extension provides a "Print Invoice" button on the Admin Orders view screen which generates a PDF of the order details.
 
-**NOTE:** Master branch should work with Spree 0.60.x + Deface
+**NOTE:** Master branch should work with Spree 1.0.x + Deface
 
  
 INSTALLATION
@@ -41,4 +41,6 @@ Configuration
 
  Use above feature for your own template if you want. For each button_name, define button_name_print text in your locale.
 
-
+Changelog
+=========
+Should work with spree 1.0.x
