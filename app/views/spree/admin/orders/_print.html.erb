@@ -86,7 +86,7 @@
             <td colspan="4">
               <p>
                 <%= t(:subtotal) %><br />
-                <% @order.adjustments.each do |charge| %>
+                <% @order.adjustments.eligible.each do |charge| %>
                   <%= charge.label %><br />
                 <% end %>
                 <%= t(:order_total) %>
@@ -95,7 +95,7 @@
             <td>
               <p>
                 <%= number_to_currency(@order.item_total) %><br />
-                <% @order.adjustments.each do |charge| %>
+                <% @order.adjustments.eligible.each do |charge| %>
                   <%= number_to_currency(charge.amount) %><br />
                 <% end %>
                 <%= number_to_currency(@order.total) %>
