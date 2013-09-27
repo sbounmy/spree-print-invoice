@@ -1,7 +1,0 @@
-<% if @order.completed_at? %>
-  <% buttons = PrintInvoice::Config[:buttons] || "invoice"
-     buttons = buttons.split(",").collect{|b| b.strip } %>
-  <%  buttons.each do |button| %>
-    <%= link_to t(button), client_print_order_path(@order, :pdf, :template => button), :class => 'btn btn-primary' %>
-  <% end %>
-<% end %>
