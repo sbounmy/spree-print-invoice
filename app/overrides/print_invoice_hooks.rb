@@ -12,6 +12,6 @@ Deface::Override.new(:virtual_path => "spree/admin/orders/edit",
 
 Deface::Override.new(:virtual_path => "spree/orders/show",
                      :name => "order_show_print_buttons",
-                     :insert_bottom => 'legend',
+                     :insert_bottom => '[data-hook="links"]',
                      :partial => "spree/orders/print_buttons",
                      :disabled => false)
